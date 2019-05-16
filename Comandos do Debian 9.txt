@@ -1,0 +1,80 @@
+                 Lista de Comandos:
+- ls:  lista de diretórios
+- ls -l:  lista de diretórios completo
+- ls -al lista de diretórios com exibição de arquivos ocultos
+- cd dir: muda do diretório atual para o especificado (substituir a variavel dir pelo nome da pasta)
+- cd: muda para o diretório /home (arquivos pessoais)
+- Pwd: exibe o caminho do diretório atual
+- mkdir: cria um diretório especificado (substituir a variável dir pelo nome da pasta)
+- rm: apaga o arquivo especificado
+- rm -f: apaga o arquivo especificado forçadamente
+- cp: copia arquivo
+- mv: move o arquivo
+- touch: cria ou atualiza o arquivo
+- cat >: direciona a entrada padrão para um arquivo
+- more: exibe o conteudo de um arquivo
+- head: exibe os 10 linhas de um arquivo
+- tail: exibe as últimas 10 linhas de um arquivo
+- tail -f: exibe o conteudo de um arquivo enquanto ele é atualizado
+- ps: exibe os processos dos usuários ativos em tempo real
+
+Diretório do root: A primeira hierarquia do sistema de arquivos ou somente, Hierarquia primária
+- /bin/ binários principais dos usuários
+- /boot/ arquivos do sistema de boot
+- /dev/ arquivos de dispositivos
+- /etc/ arquivos de configuração do sistema
+- /home/ diretório dos usuários comuns do sistema
+- /lib/ bibliotecas essenciais do sistema e os módulos de kernel
+- /media/ diretório de montagem e dispositivos
+- /mnt/ diretório de montagem de dispositivos - mesmo que "media"
+- /apt/ instalação de programas não oficiais da distribuição ou por conta do usuário
+- /sbin/ armazena arquivos executáveis  que representam comandos Exemplo: shutdown
+- srv/ diretório para dados de serviço fornecidos pelo sistema
+- /tmp/ diretório para arquivos temporários
+- /usr/ segunda hierarquia do sistema, onde ficam os usuários comuns do sistema e programas
+- /var/ diretório com arquivos variáveis gerados pelo programa do sistema. exemplo: logs, spool de impressoras, e-mail e cache
+- /root/ diretório do usuário root  O usuário tem o total poder sobre o sistema. podendo instalar, desintalar e configurar
+- /proc/ diretório birtual controlado pelo kernel com configurção total do sistema.   
+
+                             Permissões de Leitura e ggravação:
+- chmod 600: tornar um ficheiro existente proibido de ser lido e ser escrito
+por outras pessoas (não executável para todos)
+- chmod 644: tornar um ficheiro existente permissível de ser lido mas
+proibido de ser escrito por outras pessoas (não executável para todos)
+- chmod: tornar um ficheiro existente permissível de ser lido mas
+proibido de ser escrito por outras pessoas (executável para todos)
+
+                              Configuração
+A configuração das interfaces de rede é guardada no ficheiro /etc/network/interfaces:
+
+/etc/network/interfaces
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+# allow-hotplug enp0s3
+# iface enp0s3 inet dhcp
+
+# Static IP address
+auto enp0s3
+iface eth0 inet static
+        address 192.168.1.100
+        netmask 255.255.255.0
+        network 192.168.1.0
+        broadcast 192.168.1.255
+        gateway 192.168.1.1
+
+
+- apt-get update  atualiza o sistema
+- apt-get install     você instala programas
+- cp /etc/sarg/sarg.conf /etc/sarg/sarg.conf.orig       fazer copia de segurança
+- tar -xpzvf squid.tar.gz          para descompactar
+
+
+
+
+
